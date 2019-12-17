@@ -24,7 +24,7 @@ pipeline {
                         openshift.withProject {
                             env.TAG = readMavenPom().getVersion()
                             openshift.selector("bc", "hello-openshift").startBuild("--wait=true")
-                            openshift.tag("telefonica-dev/hello-openshift:latest", "hello-openshift")
+                            openshift.tag("telefonica-dev/hello-openshift:latest", "hello-openshift:${env.TAG}")
                         }
                     }
                 }
