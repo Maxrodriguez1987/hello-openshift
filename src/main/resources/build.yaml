@@ -48,6 +48,10 @@ items:
         ref: master
         uri: https://github.com/Maxrodriguez1987/hello-openshift.git
       type: Git
+  resources:
+  requests: 
+    cpu: "100m"
+    memory: "256Mi"    
     strategy:
       jenkinsPipelineStrategy:
         jenkinsfilePath: Jenkinsfile
