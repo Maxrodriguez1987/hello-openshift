@@ -38,7 +38,7 @@ items:
         uri: 'https://github.com/Maxrodriguez1987/hello-openshift.git'
     resources:
     requests: 
-      cpu: "100m"
+      cpu: "20m"
       memory: "256Mi"          
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
