@@ -36,10 +36,6 @@ items:
       type: Git
       git:
         uri: 'https://github.com/Maxrodriguez1987/hello-openshift.git'
-    resources:
-    requests: 
-      cpu: "20m"
-      memory: "512Mi"          
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
   metadata:
@@ -50,7 +46,7 @@ items:
     source:
       git:
         ref: master
-        uri: https://github.com/Maxrodriguez1987/hello-openshift.git
+        uri: 'https://github.com/Maxrodriguez1987/hello-openshift.git'
       type: Git
     strategy:
       jenkinsPipelineStrategy:
